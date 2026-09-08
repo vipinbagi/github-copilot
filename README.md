@@ -1,51 +1,86 @@
-# DigiSoftX
+# DigiSoftX Labs Website
 
-DigiSoftX is a professional software development and IT services brand focused on helping businesses build reliable digital systems, custom software, and growth-ready technology solutions.
+A responsive, multi-page static website for DigiSoftX Labs, built with plain HTML, CSS and JavaScript.
 
-## Overview
+## Pages
 
-This project is a multi-page static business website for DigiSoftX, designed to present the company as a trusted technology partner for startups and growing businesses. The site includes dedicated pages for Home, About, Services, Process, and Contact.
+- `index.html` - Homepage
+- `about.html` - Company overview
+- `services.html` - Services catalogue
+- `contact.html` - Contact and project enquiry form
 
-## Brand Details
+## Tech Stack
 
-- Company: DigiSoftX
-- Website: digisoftx.com
-- Phone: 8076500700
-- Email: contact.digisoftx@gmail.com
-- Focus: Software Development and IT Works
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Local SVG assets
 
-## Project Structure
+No framework, package manager or build step is required.
 
-```text
-.
-├── index.html              # Homepage
-├── about.html              # About page
-├── services.html           # Services page
-├── process.html            # Process page
-├── contact.html            # Contact page
-├── assets/
-│   ├── css/
-│   │   └── styles.css      # Shared design system and page styling
-│   └── js/
-│       └── script.js       # Shared form interaction and year handling
-├── README.md               # Project documentation
-└── .gitignore              # Optional ignore file (if added later)
-```
+## Quick Start
 
-## Local Preview
+### Requirements
 
-Run a simple local web server:
+- A modern browser
+- Python 3, or any static HTTP server
+
+### Run locally
+
+From the project root:
 
 ```bash
 python3 -m http.server 3000
 ```
 
-Then open:
+Open <http://localhost:3000>.
+
+Use an HTTP server instead of opening the files directly because the shared layout is loaded by JavaScript.
+
+## Project Structure
 
 ```text
-http://localhost:3000
+.
+├── index.html
+├── about.html
+├── services.html
+├── contact.html
+└── assets/
+    ├── css/
+    │   └── styles.css       # Shared styles and responsive layout
+    ├── images/              # Logo and service illustrations
+    └── js/
+        ├── layout.js        # Shared header, footer and chat CTA
+        └── script.js        # Form feedback and copyright year
 ```
 
-## Notes
+## Common Changes
 
-This project follows a cleaner multi-page structure for a more professional website setup. Shared styling and script logic are centralized under the assets folder to keep the code organized and easier to maintain.
+| Change | File |
+| --- | --- |
+| Header, footer or chat button | `assets/js/layout.js` |
+| Colors, typography or responsive styles | `assets/css/styles.css` |
+| Contact form behavior | `assets/js/script.js` |
+| Page content | The relevant `.html` file |
+| Logo or service artwork | `assets/images/` |
+
+## Deployment
+
+The project can be deployed directly to any static host:
+
+- GitHub Pages
+- Netlify
+- Vercel
+- Traditional web hosting
+
+Upload the project while preserving its folder structure. No build command is needed. Configure the custom domain in the hosting provider's dashboard.
+
+## Contact Details
+
+- Website: <https://www.digisoftx.com>
+- Email: <contact.digisoftx@gmail.com>
+- Phone: [+91 80765 00700](tel:+918076500700)
+
+## Production Note
+
+The contact form currently shows front-end feedback only. Connect it to a backend or form service before using it for real enquiries.
